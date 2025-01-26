@@ -1,7 +1,7 @@
 import {FC} from 'react'
 import JsonChangeValue from '../changeable-elements/JsonChangeValue.tsx'
 import {Box} from '@mui/material'
-import AddBook from '../find-books/AddBook.tsx'
+import {AddBook} from '@features/find-books'
 
 const ResourceSupportPage: FC = () => {
     return (

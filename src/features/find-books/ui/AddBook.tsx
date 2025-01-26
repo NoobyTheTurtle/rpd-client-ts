@@ -17,7 +17,7 @@ import {useStore} from "@shared/hooks"
 import {showErrorMessage, showSuccessMessage} from "@shared/lib"
 import {axiosBase} from '@shared/api'
 
-interface AddBook {
+interface IAddBook {
     elementName: string;
 }
 
@@ -30,7 +30,7 @@ interface BookData {
     // ... другие поля, если они есть
 }
 
-const AddBook: FC<AddBook> = ({elementName}) => {
+export const AddBook: FC<IAddBook> = ({elementName}) => {
     const [open, setOpen] = useState<boolean>(false)
     const [bookName, setBookName] = useState<string>('')
     const [error, setError] = useState<boolean>(false)
@@ -146,5 +146,3 @@ const AddBook: FC<AddBook> = ({elementName}) => {
         </>
     )
 }
-
-export default AddBook
