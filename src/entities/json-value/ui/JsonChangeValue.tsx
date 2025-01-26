@@ -2,7 +2,7 @@ import {FC, MouseEvent, useState} from 'react'
 import {Box, Button, IconButton, ListItemIcon, ListItemText, Menu, MenuItem, Typography} from '@mui/material'
 import EditIcon from '@mui/icons-material/Edit'
 import {useStore} from "@shared/hooks"
-import TextEditor from './TextEditor.tsx'
+import {TextEditor} from './TextEditor'
 import {showErrorMessage, showSuccessMessage} from "@shared/lib"
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz'
 import DownloadIcon from '@mui/icons-material/Download'
@@ -12,7 +12,7 @@ interface JsonChangeValue {
     elementName: string;
 }
 
-const JsonChangeValue: FC<JsonChangeValue> = ({elementName}) => {
+export const JsonChangeValue: FC<JsonChangeValue> = ({elementName}) => {
     const {updateJsonData} = useStore()
     const elementValue = useStore.getState().jsonData[elementName]
 
@@ -135,5 +135,3 @@ const JsonChangeValue: FC<JsonChangeValue> = ({elementName}) => {
         </Box>
     )
 }
-
-export default JsonChangeValue

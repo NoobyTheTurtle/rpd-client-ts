@@ -2,7 +2,7 @@ import {Box} from '@mui/material'
 import {FC} from 'react'
 import {useStore} from "@shared/hooks"
 
-const ScopeDisciplinePage: FC = () => {
+export const ScopeDisciplinePage: FC = () => {
     const jsonData = useStore.getState().jsonData
     const summHours = () => {
         let summ = 0
@@ -25,5 +25,3 @@ const ScopeDisciplinePage: FC = () => {
         </Box>
     )
 }
-
-export default ScopeDisciplinePage

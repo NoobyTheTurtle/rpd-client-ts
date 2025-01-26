@@ -8,7 +8,7 @@ interface SelectorProps {
     certification: string;
 }
 
-const CertificationSelector: FC<SelectorProps> = ({certification}) => {
+export const CertificationSelector: FC<SelectorProps> = ({certification}) => {
     const [valueCertification, setValueCertification] = useState<string>(certification)
     const {updateJsonData} = useStore()
 
@@ -45,4 +45,3 @@ const CertificationSelector: FC<SelectorProps> = ({certification}) => {
         </Select>
     )
 }
-export default CertificationSelector

@@ -1,11 +1,11 @@
 import {useStore} from "@shared/hooks"
-import JsonChangeValue from '../changeable-elements/JsonChangeValue.tsx'
+import {Loader} from '@shared/ui'
 import {Box} from '@mui/material'
-import {Loader} from "@shared/ui"
 import {FC} from 'react'
-import CertificationSelector from '../changeable-elements/CertificationSelector.tsx'
+import {CertificationSelector} from "@entities/certification"
+import {JsonChangeValue} from "@entities/json-value"
 
-const DisciplinePlace: FC = () => {
+export const DisciplinePlace: FC = () => {
     const data = useStore.getState().jsonData
 
     const placeWrapper = () => {
@@ -38,5 +38,3 @@ const DisciplinePlace: FC = () => {
         </Box>
     )
 }
-
-export default DisciplinePlace

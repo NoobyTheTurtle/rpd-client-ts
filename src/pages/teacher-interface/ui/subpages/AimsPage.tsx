@@ -1,8 +1,8 @@
 import {FC} from 'react'
-import JsonChangeValue from '../changeable-elements/JsonChangeValue.tsx'
+import {JsonChangeValue} from '@entities/json-value'
 import {Box} from '@mui/material'
 
-const AimsPage: FC = () => {
+export const AimsPage: FC = () => {
 
     return (
         <Box>
@@ -11,5 +11,3 @@ const AimsPage: FC = () => {
         </Box>
     )
 }
-
-export default AimsPage

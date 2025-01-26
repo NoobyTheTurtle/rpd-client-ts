@@ -1,8 +1,8 @@
 import {FC} from 'react'
-import JsonChangeValue from '../changeable-elements/JsonChangeValue.tsx'
+import {JsonChangeValue} from '@entities/json-value'
 import {Box} from '@mui/material'
 
-const DisciplineSupportPage: FC = () => {
+export const DisciplineSupportPage: FC = () => {
     return (
         <Box>
             <Box component='h2' sx={{pb: 2}}>Перечень учебно-методического обеспечения по дисциплине </Box>
@@ -10,5 +10,3 @@ const DisciplineSupportPage: FC = () => {
         </Box>
     )
 }
-
-export default DisciplineSupportPage

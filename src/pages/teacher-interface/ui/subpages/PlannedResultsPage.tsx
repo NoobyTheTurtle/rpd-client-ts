@@ -1,7 +1,7 @@
 import {useStore} from "@shared/hooks"
 import axios from "axios"
 import {FC, useState} from 'react'
-import EditableCell from "../changeable-elements/EditableCell.tsx"
+import {EditableCell, Loader} from "@shared/ui"
 import {
     Box,
     Button,
@@ -14,14 +14,13 @@ import {
     TableHead,
     TableRow
 } from '@mui/material'
-import {Loader} from "@shared/ui"
 import {PlannedResultsData} from "../../model/DisciplineContentPageTypes.ts"
 import {showErrorMessage, showSuccessMessage} from "@shared/lib"
 import {axiosBase} from "@shared/api"
 import Papa from 'papaparse'
 import {Can} from "@shared/ability"
 
-const PlannedResultsPage: FC = () => {
+export const PlannedResultsPage: FC = () => {
     const initialData = useStore.getState().jsonData.competencies as PlannedResultsData | undefined
     const initialDataLength = initialData ? Object.keys(initialData).length : 0
 
@@ -176,5 +175,3 @@ const PlannedResultsPage: FC = () => {
         </Box>
     )
 }
-
-export default PlannedResultsPage

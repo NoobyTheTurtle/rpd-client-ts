@@ -3,7 +3,7 @@ import {Box} from '@mui/material'
 import {useStore} from "@shared/hooks"
 import {Loader} from "@shared/ui"
 
-const CoverPage: FC = () => {
+export const CoverPage: FC = () => {
     const jsonData = useStore.getState().jsonData
 
     return (
@@ -53,5 +53,3 @@ const CoverPage: FC = () => {
         </Box>
     )
 }
-
-export default CoverPage

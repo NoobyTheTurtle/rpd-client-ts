@@ -1,6 +1,6 @@
 import {FC, useEffect, useState} from 'react'
 import {useStore} from "@shared/hooks"
-import JsonChangeValue from '../changeable-elements/JsonChangeValue.tsx'
+import {EditableCell, EditableNumber} from '@shared/ui'
 import {
     Box,
     Button,
@@ -15,16 +15,15 @@ import {
 } from '@mui/material'
 import {DisciplineContentData, ObjectHours} from '../../model/DisciplineContentPageTypes.ts'
 import {showErrorMessage, showSuccessMessage} from "@shared/lib"
-import EditableCell from '../changeable-elements/EditableCell.tsx'
-import {EditableNumber} from '../changeable-elements/EditableNumber.tsx'
 import {axiosBase} from '@shared/api'
+import {JsonChangeValue} from "@entities/json-value"
 
 interface StudyLoad {
     id: string;
     name: string;
 }
 
-const DisciplineContentPage: FC = () => {
+export const DisciplineContentPage: FC = () => {
     const initialData = useStore.getState().jsonData.content as DisciplineContentData | undefined
     const dataHours: StudyLoad[] = useStore.getState().jsonData.study_load
     const maxHours: ObjectHours = dataHours.reduce((acc, item) => {
@@ -274,5 +273,3 @@ const DisciplineContentPage: FC = () => {
         </Box>
     )
 }
-
-export default DisciplineContentPage

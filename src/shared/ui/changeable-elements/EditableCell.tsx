@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, ChangeEvent } from 'react'
+import {ChangeEvent, useEffect, useRef, useState} from 'react'
 
 type EditableCellProps = {
     value: string;
@@ -6,7 +6,7 @@ type EditableCellProps = {
     readOnly?: boolean;
 };
 
-function EditableCell({ value, onValueChange, readOnly = false }: EditableCellProps) {
+export function EditableCell({value, onValueChange, readOnly = false}: EditableCellProps) {
     const [inputValue, setInputValue] = useState(value)
     const [isEditing, setIsEditing] = useState(false)
     const textAreaRef = useRef<HTMLTextAreaElement>(null)
@@ -42,16 +42,16 @@ function EditableCell({ value, onValueChange, readOnly = false }: EditableCellPr
                 value={inputValue}
                 onChange={handleInputChange}
                 onBlur={handleInputBlur}
-                style={{ height: "auto", overflowY: "hidden" }}
+                style={{height: "auto", overflowY: "hidden"}}
             />
         )
     }
 
     return (
-        <div 
+        <div
             onClick={handleDivClick}
-            style={{ 
-                whiteSpace: 'pre-wrap', 
+            style={{
+                whiteSpace: 'pre-wrap',
                 cursor: readOnly ? 'default' : 'pointer',
                 backgroundColor: readOnly ? '#f5f5f5' : 'white'
             }}
@@ -60,5 +60,3 @@ function EditableCell({ value, onValueChange, readOnly = false }: EditableCellPr
         </div>
     )
 }
-
-export default EditableCell

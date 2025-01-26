@@ -1,9 +1,9 @@
 import {FC} from 'react'
-import JsonChangeValue from '../changeable-elements/JsonChangeValue.tsx'
+import {JsonChangeValue} from '@entities/json-value'
 import {Box} from '@mui/material'
 import {AddBook} from '@features/find-books'
 
-const ResourceSupportPage: FC = () => {
+export const ResourceSupportPage: FC = () => {
     return (
         <Box>
             <Box component='h2'>Ресурсное обеспечение</Box>
@@ -26,5 +26,3 @@ const ResourceSupportPage: FC = () => {
         </Box>
     )
 }
-
-export default ResourceSupportPage
