@@ -1,11 +1,11 @@
 import {useState} from 'react'
 import {useStore} from "@shared/hooks"
 import {Box, Button} from '@mui/material'
-import {PdfReader} from './PdfReader.tsx'
 import {axiosBase} from '@shared/api'
 import {showErrorMessage} from "@shared/lib"
+import {PdfReader} from "@shared/ui"
 
-export default function TestPdf() {
+export function TestPdf() {
     const [fileName, setFileName] = useState<Blob | MediaSource | undefined>(undefined)
     const [disableButton, setDisableButton] = useState<boolean>(false)
 

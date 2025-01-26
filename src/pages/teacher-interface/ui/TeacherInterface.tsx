@@ -13,12 +13,12 @@ import DisciplineSupportPage from './pages/DisciplineSupportPage.tsx'
 import PlannedResultsPage from './pages/PlannedResultsPage.tsx'
 import ResourceSupportPage from './pages/ResourceSupportPage.tsx'
 import ScopeDisciplinePage from './pages/ScopeDisciplinePage.tsx'
-import TestPdf from './pdf-page/TestPdf.tsx' // Assuming PDF Test view
+import {TestPdf} from '@features/generate-pdf' // Assuming PDF Test view
 import {useAuth} from "@entities/auth"
 import {useStore} from "@shared/hooks"
 import {useNavigate} from 'react-router-dom'
-import {TeacherInterfaceTemplates} from "./TeacherInterfaceTemplates.tsx"
 import {UserRole} from "@shared/ability"
+import {TeacherInterfaceTemplates} from '@widgets/teacher-interface-templates'
 
 export const TeacherInterface: FC = () => {
     const userRole = useAuth.getState().userRole
