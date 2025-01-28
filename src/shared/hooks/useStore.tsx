@@ -1,6 +1,7 @@
 import {create} from 'zustand'
 import {immer} from 'zustand/middleware/immer'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type JsonValue = any;
 
 interface JsonData {
