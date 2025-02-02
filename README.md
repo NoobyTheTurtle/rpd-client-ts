@@ -37,49 +37,20 @@
 
 - **React** + **TypeScript** — разработка клиентской части;
 - **React Router** — маршрутизация;
-- **Zustand** или **React Context** — управление состоянием;
+- **Zustand** / **React Context** — управление состоянием;
 - **Yup** — валидация форм;
 - **GitHub Actions** / **Docker** — CI;
 - **Feature-Sliced Design** — подход к организации структуры фронтенда.
 
 ---
 
-## Структура репозитория
+## Структура проекта
 
 ```plaintext
-src
-├── app
-│   ├── index.tsx
-│   ├── providers
-│   ├── routers
-│   └── styles
-├── entities
-│   ├── auth
-│   ├── certification
-│   ├── json-value
-│   └── template
-├── features
-│   ├── change-rpd-template
-│   ├── create-rpd-template
-│   ├── create-rpd-template-from-1c-exchange
-│   ├── create-rpd-template-from-year
-│   ├── find-books
-│   ├── generate-pdf
-│   └── select-template-data
-├── pages
-│   ├── manager
-│   ├── rpd-template
-│   ├── sign-in
-│   └── teacher-interface
-├── shared
-│   ├── ability
-│   ├── api
-│   ├── config
-│   ├── fonts
-│   ├── hooks
-│   ├── lib
-│   └── ui
-└── widgets
-    ├── header
-    ├── rpd-list
-    └── teacher-interface-templates
+src/
+ ├── app/          — Точка входа, глобальные стили, маршрутизация и провайдеры
+ ├── entities/     — Бизнес-логика и модели (например, авторизация, шаблоны РПД)
+ ├── features/     — Функциональные модули для конкретных операций (создание/изменение РПД, генерация PDF и т.д.)
+ ├── pages/        — Страницы приложения, объединяющие функциональные модули и UI-компоненты
+ ├── shared/       — Общие ресурсы: API, конфигурация, хуки, переиспользуемые UI-компоненты
+ └── widgets/      — Независимые, переиспользуемые блоки интерфейса (шапка, списки и т.п.)
